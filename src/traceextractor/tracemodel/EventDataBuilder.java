@@ -60,11 +60,11 @@ public class EventDataBuilder {
 			} else if (joinPoint.getSignature() instanceof ConstructorSignature) {
 				Constructor constructor = ((ConstructorSignature)joinPoint.getSignature()).getConstructor();
 				if (null == constructor) {
-					System.out.println("-----------------------------------");
-					System.out.println(joinPoint.getSignature().toLongString());
-					System.out.println("Null Constructor - discarting call");
-					System.out.println("-----------------------------------");
-					System.out.flush();
+					//System.out.println("-----------------------------------");
+					//System.out.println(joinPoint.getSignature().toLongString());
+					//System.out.println("Null Constructor - discarting call");
+					//System.out.println("-----------------------------------");
+					//System.out.flush();
 					return null;
 				}
 				event_sig = constructor.getName();

@@ -43,12 +43,12 @@ public class ExtractorControlGui {
 	public File getOutputDir() {
 		if (null == outputDir) {
 			outputDir = getValidOutputDir();
-		}
-		
+		}		
 		return outputDir;
 	}
 	
 	public void buildGui() {
+		
 		mainContainer = new JFrame();
 		mainContainer.setSize(200,400);
 		mainContainer.setTitle("Trace Mark Control");
@@ -82,7 +82,9 @@ public class ExtractorControlGui {
 		mainContainer.add(status, BorderLayout.SOUTH);
 		
 		mainContainer.pack();
-		mainContainer.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+		//mainContainer.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);		
+		mainContainer.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
 		mainContainer.addWindowListener(new WindowCloseListener());
 	}
 	
